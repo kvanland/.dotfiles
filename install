@@ -1,0 +1,15 @@
+#!/usr/bin/env zsh 
+
+echo "Linking the following files..."
+echo ".oh-my-zsh/"
+ln -sf $HOME/.dotfiles/zsh/.oh-my-zsh $HOME/.oh-my-zsh
+
+echo "./zshrc"
+ln -sf $HOME/.dotfiles/zsh/.zshrc $HOME/.zshrc
+
+echo "./vimrc"
+ln -sf $HOME/.dotfiles/vim/.vimrc $HOME/.vimrc
+
+echo "Running the following files..."
+echo "\n.zshrc"
+source $HOME/.zshrc

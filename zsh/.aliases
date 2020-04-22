@@ -1,0 +1,4 @@
+echo "Configuring aliases..."
+
+alias ll='ls -lah'
+alias dc='cd'
