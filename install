@@ -16,6 +16,12 @@ ln -sf $HOME/.dotfiles/zsh/.p10k.zsh $HOME/.p10k.zsh
 echo ".vimrc"
 ln -sf $HOME/.dotfiles/vim/.vimrc $HOME/.vimrc
 
+echo ".tmux.conf"
+ln -sf $HOME/.dotfiles/tmux/.tmux.conf $HOME/.tmux.conf
+
 echo "\nRunning the following files..."
 echo "\n.zshrc"
 source $HOME/.zshrc
+
+echo "\n.tmux.conf"
+tmux source $HOME/.tmux.conf
