@@ -1,4 +1,21 @@
-echo "Configuring aliases..."
-
+# Directory listing
 alias ll='ls -lah'
+alias la='ls -A'
+alias l='ls -CF'
+
+# Navigation
 alias dc='cd'
+alias ..='cd ..'
+alias ...='cd ../..'
+
+# Git shortcuts
+alias g='git'
+alias gs='git status'
+alias gp='git push'
+alias gc='git commit'
+
+# Better defaults
+alias mkdir='mkdir -pv'
+alias grep='grep --color=auto'
+alias df='df -h'
+alias du='du -h'

@@ -11,8 +11,15 @@ export ZSH="$HOME/.oh-my-zsh"
 # Set theme
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
+# History settings
+HISTSIZE=10000
+SAVEHIST=10000
+setopt HIST_IGNORE_DUPS      # Don't save duplicate commands
+setopt HIST_IGNORE_SPACE     # Don't save commands starting with space
+setopt SHARE_HISTORY         # Share history across terminals
+
 # Plugins
-plugins=(git zsh-autosuggestions)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting z)
 
 source $ZSH/oh-my-zsh.sh
 

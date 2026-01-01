@@ -15,6 +15,9 @@ declare -A SYMLINKS=(
 
 echo "Installing dotfiles..."
 
+# Create vim undo directory for persistent undo
+mkdir -p "$HOME/.vim/undodir"
+
 # Backup and create symlinks
 for src in "${!SYMLINKS[@]}"; do
     dest="${SYMLINKS[$src]}"

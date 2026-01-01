@@ -63,6 +63,31 @@ set noerrorbells visualbell t_vb=
 " sometimes be convenient.
 set mouse+=a
 
+" Indentation
+set tabstop=4
+set shiftwidth=4
+set expandtab
+set autoindent
+set smartindent
+
+" Search highlighting
+set hlsearch
+nnoremap <leader><space> :nohlsearch<CR>
+
+" System clipboard (requires vim with +clipboard)
+set clipboard=unnamedplus
+
+" Persistent undo
+set undofile
+set undodir=~/.vim/undodir
+
+" Better splits
+set splitbelow
+set splitright
+
+" Show matching brackets
+set showmatch
+
 " Try to prevent bad habits like using the arrow keys for movement. This is
 " not the only possible bad habit. For example, holding down the h/j/k/l keys
 " for movement, rather than using more efficient movement commands, is also a

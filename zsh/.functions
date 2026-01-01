@@ -2,5 +2,5 @@
 # Converts markdown file into html and displays it
 # Usage: rmd README.md
 rmd() {
-  pandoc $1 | lynx -stdin
+  pandoc "$1" | lynx -stdin
 }
