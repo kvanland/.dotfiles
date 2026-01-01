@@ -1,4 +1,4 @@
-# Read markdown 
+# Read markdown
 # Converts markdown file into html and displays it
 # Usage: rmd README.md
 rmd() {
