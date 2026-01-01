@@ -9,6 +9,7 @@ Personal dotfiles for zsh, vim, and tmux on macOS.
 | `zsh/` | `.zshrc`, `.p10k.zsh`, `.aliases`, `.functions` | Shell config with Oh-My-Zsh + Powerlevel10k |
 | `vim/` | `.vimrc` | Vim config with line numbers, smart search, hjkl training |
 | `tmux/` | `.tmux.conf` | Tmux with `C-Space` prefix, mouse support, session restore |
+| `claude/` | `CLAUDE.md`, `commands/`, `skills/` | Claude Code personal instructions and custom commands |
 
 ## Prerequisites
 
