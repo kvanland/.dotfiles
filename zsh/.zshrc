@@ -23,6 +23,9 @@ plugins=(git zsh-autosuggestions zsh-syntax-highlighting z)
 
 source $ZSH/oh-my-zsh.sh
 
+# fzf configuration
+source /usr/share/doc/fzf/examples/key-bindings.zsh
+
 # Custom configs
 source $HOME/.dotfiles/zsh/.aliases
 source $HOME/.dotfiles/zsh/.functions
