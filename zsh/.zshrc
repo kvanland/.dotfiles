@@ -34,3 +34,4 @@ source $HOME/.dotfiles/zsh/.functions
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 export EDITOR="vim"
+export PATH="$HOME/.local/bin:$PATH"
