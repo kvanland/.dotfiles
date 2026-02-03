@@ -111,6 +111,27 @@ install_tpm() {
     git clone https://github.com/tmux-plugins/tpm "$HOME/.tmux/plugins/tpm"
 }
 
+# Install Claude Code plugins
+install_claude_plugins() {
+    if ! command -v claude &> /dev/null; then
+        warn "Claude Code not installed, skipping plugin installation"
+        return
+    fi
+
+    local plugins=(
+        "claude-hud"
+    )
+
+    for plugin in "${plugins[@]}"; do
+        if claude plugin list 2>/dev/null | grep -q "$plugin"; then
+            info "Claude plugin '$plugin' already installed"
+        else
+            info "Installing Claude plugin '$plugin'..."
+            claude plugin install "$plugin"
+        fi
+    done
+}
+
 # Create symlinks
 create_symlinks() {
     declare -A SYMLINKS=(
@@ -119,7 +140,6 @@ create_symlinks() {
         ["$DOTFILES_DIR/vim/.vimrc"]="$HOME/.vimrc"
         ["$DOTFILES_DIR/tmux/.tmux.conf"]="$HOME/.tmux.conf"
         ["$DOTFILES_DIR/claude/CLAUDE.md"]="$HOME/.claude/CLAUDE.md"
-        ["$DOTFILES_DIR/claude/commands"]="$HOME/.claude/commands"
         ["$DOTFILES_DIR/claude/skills"]="$HOME/.claude/skills"
     )
 
@@ -165,6 +185,9 @@ main() {
 
     # Create symlinks
     create_symlinks
+
+    # Install Claude Code plugins
+    install_claude_plugins
 
     echo ""
     echo "================================"
