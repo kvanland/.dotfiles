@@ -19,6 +19,10 @@ ln -sf $HOME/.dotfiles/vim/.vimrc $HOME/.vimrc
 echo ".tmux.conf"
 ln -sf $HOME/.dotfiles/tmux/.tmux.conf $HOME/.tmux.conf
 
+echo ".claude/skills/log"
+mkdir -p $HOME/.claude/skills
+ln -sf $HOME/.dotfiles/claude/skills/log $HOME/.claude/skills/log
+
 echo "\nRunning the following files..."
 echo "\n.zshrc"
 source $HOME/.zshrc
